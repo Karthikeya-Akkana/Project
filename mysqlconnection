@@ -1,0 +1,27 @@
+pip install mysql-connector-python
+
+import mysql.connector
+# Create connection
+conn = mysql.connector.connect(
+    host="localhost"
+    user="root"
+    password="your_password"
+    database="test_db"
+)
+
+cursor = conn.cursor()
+# Example
+cursor.execute("SELECT * FROM users")
+# For inserting data
+cursor.execute(
+"INSERT INTO users (name, age)
+)
+conn.commit()
+
+# for fetching data in the first row
+for row in cursor.fetchall():
+    print(row)
+
+# For closing connection
+conn.close()
+    
